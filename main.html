@@ -1,0 +1,179 @@
+﻿<html>
+
+<head>
+  <title>k0t3x / online</title>
+  <script>
+    window.status = "k0t3x / online"
+  </script>
+  <script type="text/javascript">
+
+    function init() {
+      if (!document.getElementById) return
+      var imgOriginSrc;
+      var imgTemp = new Array();
+      var imgarr = document.getElementsByTagName('img');
+      for (var i = 0; i < imgarr.length; i++) {
+        if (imgarr[i].getAttribute('hsrc')) {
+          imgTemp[i] = new Image();
+          imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+          imgarr[i].onmouseover = function () {
+            imgOriginSrc = this.getAttribute('src');
+            this.setAttribute('src', this.getAttribute('hsrc'))
+          }
+          imgarr[i].onmouseout = function () {
+            this.setAttribute('src', imgOriginSrc)
+          }
+        }
+      }
+    }
+    onload = init;
+
+    // Fake counter animation
+    function animateCounter() {
+      var counterElement = document.getElementById('fakeCounter');
+      if (counterElement) {
+        var currentCount = parseInt(counterElement.textContent);
+        var targetCount = 423193;
+        var increment = Math.ceil((targetCount - currentCount) / 50);
+
+        if (currentCount < targetCount) {
+          counterElement.textContent = Math.min(currentCount + increment, targetCount);
+          setTimeout(animateCounter, 30);
+        }
+      }
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(animateCounter, 500);
+    });
+
+  </script>
+  <style>
+    a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #9090FF;
+    }
+  </style>
+  <STYLE>
+    <!--
+    A {
+      text-decoration: none
+    }
+    -->
+  </STYLE>
+  <META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+
+</head>
+<style type="text/css">
+  body,
+  html {
+    scrollbar-base-color: black;
+    scrollbar-face-color: 1000AC;
+    scrollbar-track-color: black;
+    scrollbar-3dlight-color: black;
+    scrollbar-highlight-color: black;
+    scrollbar-arrow-color: white;
+    scrollbar-darkshadow-color: black;
+    scrollbar-shadow-color: black;
+  }
+</style>
+<style type="text/css">
+  body,
+  td,
+  th {
+    font-size: 12;
+  }
+
+  /* Fake counter styles */
+  .counter-container {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .counter-display {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 2px solid #333333;
+    display: inline-block;
+    min-width: 100px;
+    text-align: right;
+  }
+
+  .counter-label {
+    font-size: 11px;
+    color: #999999;
+    margin-top: 3px;
+  }
+</style>
+
+
+<body style="margin-top : 0;" background="" bgproperties="fixed" bgcolor="#004080" link="#9090FF" vlink="#9090FF"
+  alink="#FFFFFF" text="#FFFFFF">
+  <table border='0' CELLPADDING="0" CELLSPACING="0" bordercolor='black' align="left" valign="middle">
+    <tr>
+      <td><img src="Assets/Site/homebanner.gif" border='0'></td>
+    </tr>
+    <tr>
+      <td><span style="color: #004080">|</span></td>
+    </tr>
+    <tr>
+      <td><img src="Assets/Icons/welcomesymbol.gif"><strong><span style="color: #000000"><u>Welcome</u></span></strong>
+      </td>
+    </tr>
+    <tr>
+      <td>Welcome to k0t3x online, feel free to browse the site. thanks.</td>
+    </tr>
+    <tr>
+      <td>
+        <hr>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="Assets/Icons/siterequirements.gif"><strong><span style="color: #000000"> <u>Site
+              Requirements</u></span></strong></td>
+    </tr>
+    <tr>
+      <td>To view this page correctly you will need a new version of <i>Internet Explorer</i>, <i>Netscape</i> or
+        <i>Firefox</i> do not support some features within the site. If you have Active-X turned off, you will also need
+        to allow that to view all features of the site. thanks.</td>
+    </tr>
+    <tr>
+      <td>
+        <hr>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="Assets/Icons/newssymbol.gif"><strong><span style="color: #000000"><u>News</u></span></strong></td>
+    </tr>
+    <tr>
+      <td><span style="color: #9090FF">Wednesday, May 04th, 05</span><br>
+        All sections to the site are now working. Check everything out. I set up a <a
+          href="guestbook.html">guestbook</a> so make sure you sign that.<br></br>
+    </tr>
+    <tr>
+      <td><span style="color: #9090FF">Saturday, April 30th, 05</span><br>
+        I've worked on the site a lot today. Got the "about", "projects", "pictures" & "pranks" sections working. check
+        em out.<br></br>
+        <span style="color: #9090FF">Friday, April 29th, 05</span><br>
+        The site is now up & running. This is the only thing that works on the site so far. I will add the other
+        sections later when I get around to it. Thanks to Chris for hosting this shit & hooking me up with the domain.
+        Check his site under "Affiliates". peace.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <hr>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+
+</html>

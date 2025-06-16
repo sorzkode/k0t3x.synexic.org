@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k0t3x / online - Guestbook</title>
+    <style>
+        body {
+            background-color: #004080;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        a {
+            color: #9090FF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #9090FF;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .navigation {
+            margin-bottom: 20px;
+        }
+
+        .guestbook-entry {
+            margin-bottom: 15px;
+        }
+
+        .entry-header {
+            background: url('Assets/ipei_imgs/top_border.gif');
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .entry-name {
+            color: white;
+            font-weight: bold;
+        }
+
+        .entry-content {
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 10px;
+        }
+
+        .entry-message {
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        .entry-info {
+            text-align: right;
+            color: gray;
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        .entry-border-left {
+            background: url('Assets/ipei_imgs/left_border.gif');
+        }
+
+        .entry-border-right {
+            background: url('Assets/ipei_imgs/right_border.gif');
+        }
+
+        .entry-footer {
+            background: url('Assets/ipei_imgs/bot_border.gif');
+        }
+
+        .pagination {
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+        }
+
+        .pagination strong {
+            font-size: 18px;
+            margin: 0 5px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #ccc;
+        }
+
+        .notice {
+            background-color: #333;
+            color: #FFF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .sign-button {
+            background-color: #666;
+            color: white;
+            padding: 8px 15px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .sign-button:hover {
+            background-color: #777;
+            text-decoration: none;
+        }
+
+        /* Scrollbar styles for IE */
+        body,
+        html {
+            scrollbar-base-color: black;
+            scrollbar-face-color: #1000AC;
+            scrollbar-track-color: black;
+            scrollbar-3dlight-color: black;
+            scrollbar-highlight-color: black;
+            scrollbar-arrow-color: white;
+            scrollbar-darkshadow-color: black;
+            scrollbar-shadow-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <table width="600" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="Assets/ipei_imgs/test.gif" alt="">
+                        Page 1 of 1 |
+                        <a href="#view">view</a> |
+                        <a href="#sign">sign</a> |
+                        <a href="main.html">back to main</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="notice">
+            <strong>Notice:</strong> This is a static version of what the guestbook would have looked like.
+        </div>
+
+        <!-- Fake guestbook entries -->
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">xXDarkAngelXx</span>
+                    </td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/email_less.gif" width="19" height="25" alt=""></td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/homepage_less.gif" width="17" height="25" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            sick site dude!! love the design and all the pranks lmao. keep it up! :)
+                        </div>
+                        <div class="entry-info">May 28, 2005 (7)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">Chris</span>
+                    </td>
+                    <td class="entry-header"><a href="mailto:webmaster@example.com"><img src="Assets/ipei_imgs/email.gif"
+                                width="19" height="25" border="0" alt="Email"></a></td>
+                    <td class="entry-header"><a href="http://www.example.com" target="_blank"><img
+                                src="Assets/ipei_imgs/homepage.gif" width="17" height="25" border="0" alt="Homepage"></a></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            Finally got your guestbook working! Site's looking good man. Hit me up on AIM later.
+                        </div>
+                        <div class="entry-info">May 15, 2005 (6)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">l33th4x0r</span>
+                    </td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/email_less.gif" width="19" height="25" alt=""></td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/homepage_less.gif" width="17" height="25" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            yo k0t3x nice site bro... the blue design is tight. check out my site when u get a
+                            chance<br><br>
+                            peace out<br>
+                            -l33t
+                        </div>
+                        <div class="entry-info">May 10, 2005 (5)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">Sarah</span>
+                    </td>
+                    <td class="entry-header"><a href="mailto:sarah@email.com"><img src="Assets/ipei_imgs/email.gif" width="19"
+                                height="25" border="0" alt="Email"></a></td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/homepage_less.gif" width="17" height="25" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            Cool site! Found it through Chris's page. The pictures section is hilarious XD
+                        </div>
+                        <div class="entry-info">May 8, 2005 (4)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">Anonymous</span>
+                    </td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/email_less.gif" width="19" height="25" alt=""></td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/homepage_less.gif" width="17" height="25" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            first post! w00t!
+                        </div>
+                        <div class="entry-info">May 4, 2005 (3)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">test</span>
+                    </td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/email_less.gif" width="19" height="25" alt=""></td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/homepage_less.gif" width="17" height="25" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            testing the guestbook
+                        </div>
+                        <div class="entry-info">May 4, 2005 (2)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="guestbook-entry">
+            <table width="600" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="Assets/ipei_imgs/top_left_cor.gif" width="15" height="25" alt=""></td>
+                    <td width="533" valign="center" class="entry-header">
+                        <img src="Assets/ipei_imgs/blank.gif" width="533" height="1" alt=""><br>
+                        <span class="entry-name">k0t3x</span>
+                    </td>
+                    <td class="entry-header"><img src="Assets/ipei_imgs/email_less.gif" width="19" height="25" alt=""></td>
+                    <td class="entry-header"><a href="http://k0t3x.synexic.org" target="_blank"><img
+                                src="Assets/ipei_imgs/homepage.gif" width="17" height="25" border="0" alt="Homepage"></a></td>
+                    <td><img src="Assets/ipei_imgs/top_right_cor.gif" width="16" height="25" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="entry-border-left"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                    <td colspan="3" valign="top" class="entry-content" width="569">
+                        <div class="entry-message">
+                            Welcome to my guestbook! Sign it if you visit the site. peace
+                        </div>
+                        <div class="entry-info">May 4, 2005 (1)</div>
+                    </td>
+                    <td class="entry-border-right"><img src="Assets/ipei_imgs/blank.gif" width="1" height="1" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+                    <td colspan="3" class="entry-footer" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                            height="1" alt=""></td>
+                    <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+                </tr>
+            </table>
+        </div lass="guestbook-entry"></td>
+        <table width="600" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td><img src="Assets/ipei_imgs/bot_left_cor.gif" width="15" height="18" alt=""></td>
+            <td colspan="3" style="background-color: #666666;" width="569"><img src="Assets/ipei_imgs/blank.gif" width="569"
+                    height="1" alt=""></td>
+            <td><img src="Assets/ipei_imgs/bot_right_cor.gif" width="16" height="18" alt=""></td>
+        </tr>
+        </table>
+    </div>
+
+    <div id="sign" style="margin-top: 30px;">
+        <a href="#" class="sign-button"
+            onclick="alert('This guestbook is archived and no longer accepting new entries.'); return false;">Sign
+            Guestbook (Disabled)</a>
+    </div>
+
+    <div class="footer">
+        <a href="main.html">Home</a> |
+        <a href="https://www.epistream.com/ipei" target="_blank">iPei</a> |
+        Archived Guestbook
+    </div>
+    </div>
+</body>
+
+</html>

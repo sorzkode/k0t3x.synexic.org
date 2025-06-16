@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+<title>k0t3x / online</title>
+<script>
+window.status="k0t3x / online"
+</script>
+<script type="text/javascript">
+
+function init() {
+  if (!document.getElementById) return
+  var imgOriginSrc;
+  var imgTemp = new Array();
+  var imgarr = document.getElementsByTagName('img');
+  for (var i = 0; i < imgarr.length; i++) {
+    if (imgarr[i].getAttribute('hsrc')) {
+        imgTemp[i] = new Image();
+        imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+        imgarr[i].onmouseover = function() {
+            imgOriginSrc = this.getAttribute('src');
+            this.setAttribute('src',this.getAttribute('hsrc'))
+        }
+        imgarr[i].onmouseout = function() {
+            this.setAttribute('src',imgOriginSrc)
+        }
+    }
+  }
+}
+onload=init;
+
+</script>
+<style>
+a:hover{ color:#FFFFFF; text-decoration:underline; }
+a:visited{ color:#9090FF; } 
+</style>
+<STYLE>
+<!--
+A{text-decoration:none}
+-->
+</STYLE>
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+
+</head>
+<style type="text/css">
+body,html {
+scrollbar-base-color: black;
+scrollbar-face-color: 1000AC;
+scrollbar-track-color: black;
+scrollbar-3dlight-color: black;
+scrollbar-highlight-color: black;
+scrollbar-arrow-color: white;
+scrollbar-darkshadow-color: black;
+scrollbar-shadow-color: black;
+ }
+</style>
+<style type="text/css">
+body,td,th { font-size: 12; }
+</style>
+
+
+<body style="margin-top : 0;" background="" bgproperties="fixed" bgcolor="#004080" link="#9090FF" vlink="#9090FF" alink="#FFFFFF" text="#FFFFFF">
+<table border='0'  CELLPADDING="0" CELLSPACING="0" bordercolor='black' align="left" valign="middle">
+<tr>
+<td><img src="Assets/Site/projectsbanner.gif" border='0'></td>
+</tr>
+<tr>
+<td><span style="color: #004080">|</span></td>
+</tr>
+<tr>
+<td><img src="Assets/Icons/projectssymbol.gif"><strong><span style="color: #000000"> <u>Surrounded yet Fighting</u></span></strong></td>
+</tr>
+<tr>
+<td><strong>SYF</strong> is a solo project of mine. I do all the music myself. Guitar/Bass/Drums/Vocals. I do the drums on a keyboard. I record everything seperate onto my pc & use Acoustica to mix it all together. Main site: <a href="http://www.surroundedyetfighting.info" target="resource window">Surroundedyetfighting.info</a> Mp3 Downloads available at: <a href="http://www.hxcmp3.com/surrounded_yet_fighting" target="resource window">HxCmp3</a> & <a href="http://www.purevolume.com/surroundedyetfighting" target="resource window">Purevolume</a>.</td>
+</tr>
+<tr>
+<td><hr></td>
+</tr>
+<tr>
+<td><img src="Assets/Icons/Projectssymbol.gif"><strong><span style="color: #000000"> <u>CritiCAL IRC</u></span></strong></td>
+</tr>
+<tr>
+<td><a href="critical.html">Critical IRC </a> is an IRC script that I'm working on at the moment & will be available for download from here & many other sites once I finish it. It's a utility script full of features. Most of it is made in dialog giving it a nice look & easy use. Tons of help files. Protections: kick, ban, deop, nick flood, clone flood, repeat flood, clone notify, text flood, excessive colors kick, bad word kick, #channel advertising kick, mass kick protection, mass deop protection, clone scanner, channel spy(pops up a custom window alerting you when someone mentions your nick). All those are put together within a very nice dialog. Also features userlists such as blacklist, auto op, auto voice and protection, all in dialog. An auto join in dialog. mp3 player in dialog. Very nice away system in dialog. Virtually anything you can do with IRC this script allows you to do with ease. I will post up screen shots later.</td>
+</tr>
+</table>
+</html>

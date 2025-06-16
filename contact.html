@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+<title>k0t3x / online</title>
+<script>
+window.status="k0t3x / online"
+</script>
+<script type="text/javascript">
+
+function init() {
+  if (!document.getElementById) return
+  var imgOriginSrc;
+  var imgTemp = new Array();
+  var imgarr = document.getElementsByTagName('img');
+  for (var i = 0; i < imgarr.length; i++) {
+    if (imgarr[i].getAttribute('hsrc')) {
+        imgTemp[i] = new Image();
+        imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+        imgarr[i].onmouseover = function() {
+            imgOriginSrc = this.getAttribute('src');
+            this.setAttribute('src',this.getAttribute('hsrc'))
+        }
+        imgarr[i].onmouseout = function() {
+            this.setAttribute('src',imgOriginSrc)
+        }
+    }
+  }
+}
+onload=init;
+
+</script>
+<style>
+a:hover{ color:#FFFFFF; text-decoration:underline; }
+a:visited{ color:#9090FF; } 
+</style>
+<STYLE>
+<!--
+A{text-decoration:none}
+-->
+</STYLE>
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+
+</head>
+<style type="text/css">
+body,html {
+scrollbar-base-color: black;
+scrollbar-face-color: 1000AC;
+scrollbar-track-color: black;
+scrollbar-3dlight-color: black;
+scrollbar-highlight-color: black;
+scrollbar-arrow-color: white;
+scrollbar-darkshadow-color: black;
+scrollbar-shadow-color: black;
+ }
+</style>
+<style type="text/css">
+body,td,th { font-size: 12; }
+</style>
+
+
+<body style="margin-top : 0;" background="" bgproperties="fixed" bgcolor="#004080" link="#9090FF" vlink="#9090FF" alink="#FFFFFF" text="#FFFFFF">
+<table border='0'  CELLPADDING="0" CELLSPACING="0" bordercolor='black' align="left" valign="middle">
+<tr>
+<td><img src="Assets/Site/homebanner.gif" border='0'></td>
+</tr>
+<tr>
+<td><span style="color: #004080">|</span></td>
+</tr>
+<tr>
+<td><img src="Assets/Icons/contactsymbol.gif"><strong><span style="color: #000000"> <u>Contact</u></span></strong></td>
+</tr>
+<tr>
+<td><span style="color: #004080">|</span></td>
+</tr>
+<tr>
+<td>
+<img src="Assets/Icons/emailsymbol.gif">Email: <a href="mailto: m0rehardc0re@yahoo.com" title="Email">m0rehardc0re@yahoo.com</a><br>
+<img src="Assets/Icons/aimsymbol.gif">AIM: <a href="aim:addbuddy?screenname=man im tuff" title="Add me">man im tuff</a><br>
+<img src="Assets/Icons/msnsymbol.gif">MSN: <a href="mailto: KritiK1LL@hotmail.com" title="Email">KritiK1LL@hotmail.com</a><br>
+<img src="Assets/Icons/yahoosymbol.gif">Yahoo: <span style="color: #9090FF">m0rehardc0re</span><br>
+<img src="Assets/Icons/ircsymbol.gif">IRC: (nick/<span style="color: #9090FF">k0t3x</span> - network/<span style="color: #9090FF">DALnet</span> - channel/<span style="color: #9090FF">#tyrant</span>)<br>
+
+</td>
+</tr>
+</table>
+</html>

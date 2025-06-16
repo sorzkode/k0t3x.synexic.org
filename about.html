@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+<title>k0t3x / online</title>
+<script>
+window.status="k0t3x / online"
+</script>
+<script type="text/javascript">
+
+function init() {
+  if (!document.getElementById) return
+  var imgOriginSrc;
+  var imgTemp = new Array();
+  var imgarr = document.getElementsByTagName('img');
+  for (var i = 0; i < imgarr.length; i++) {
+    if (imgarr[i].getAttribute('hsrc')) {
+        imgTemp[i] = new Image();
+        imgTemp[i].src = imgarr[i].getAttribute('hsrc');
+        imgarr[i].onmouseover = function() {
+            imgOriginSrc = this.getAttribute('src');
+            this.setAttribute('src',this.getAttribute('hsrc'))
+        }
+        imgarr[i].onmouseout = function() {
+            this.setAttribute('src',imgOriginSrc)
+        }
+    }
+  }
+}
+onload=init;
+
+</script>
+<style>
+a:hover{ color:#FFFFFF; text-decoration:underline; }
+a:visited{ color:#9090FF; } 
+</style>
+<STYLE>
+<!--
+A{text-decoration:none}
+-->
+</STYLE>
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+
+</head>
+<style type="text/css">
+body,html {
+scrollbar-base-color: black;
+scrollbar-face-color: 1000AC;
+scrollbar-track-color: black;
+scrollbar-3dlight-color: black;
+scrollbar-highlight-color: black;
+scrollbar-arrow-color: white;
+scrollbar-darkshadow-color: black;
+scrollbar-shadow-color: black;
+ }
+</style>
+<style type="text/css">
+body,td,th { font-size: 12; }
+</style>
+
+
+<body style="margin-top : 0;" background="" bgproperties="fixed" bgcolor="#004080" link="#9090FF" vlink="#9090FF" alink="#FFFFFF" text="#FFFFFF">
+<table border='0'  CELLPADDING="0" CELLSPACING="0" bordercolor='black' align="left" valign="middle">
+<tr>
+<td><img src="Assets/Site/aboutbanner.gif" border='0'></td>
+</tr>
+<tr>
+<td><span style="color: #004080">|</span></td>
+</tr>
+<tr>
+<td><img src="Assets/Icons/aboutsymbol.gif"><strong><span style="color: #000000"> <u>Myself</u></span></strong></td>
+</tr>
+<tr>
+<td>I'm Paul, I'm comin atcha, you can't stop me, thats all you need to know.</td>
+</tr>
+<tr>
+<td><hr></td>
+</tr>
+<tr>
+<td><img src="Assets/Icons/aboutsymbol.gif"><strong><span style="color: #000000"> <u>The Site</u></span></strong></td>
+</tr>
+<tr>
+<td>If you are going to be cool you need your own personal site, & I myself am cool. I also wanted a place I could host things from, like my work with scripting, funny logs, pranks my friends & I do. This site is hosted by my good friend <a href="http://www.chrisleigh.info" target="resource window">synexic</a></td>
+</tr>
+</table>
+</html>
